@@ -13,7 +13,13 @@ curs = conn.cursor()
 
 
 # How many total Characters are there?
- 
+sql = """
+SELECT
+	COUNT(DISTINCT character_id) AS characters
+FROM charactercreator_character
+"""
+result = curs.execute(sql).fetchall()
+print(result)
 
 
 # REVISIT THIS. THESE ARE NOT IN ORDER AND DON'T INCLUDE THE NAMES OF THE CLASSES.
