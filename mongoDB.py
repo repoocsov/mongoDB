@@ -127,6 +127,7 @@ CLUSTER_NAME = os.getenv("MONGO_CLUSTER", default="OOPS")
 connection_uri = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@{CLUSTER_NAME}.mongodb.net/test?retryWrites=true&w=majority"
 client = pymongo.MongoClient(connection_uri)
 
+<<<<<<< HEAD
 # Create/connect to a cluster (DB) to hold our collections (tables)
 db = client.rpg_collection 
 
@@ -212,3 +213,8 @@ There's a lot this week, but those reps are what will help with the SC
 # On average, how many Weapons does each character have?
 
 
+=======
+collection.insert_many(list_of_dicts)
+print("DOCS:", collection.count_documents({}))
+print("ANY NAMES:", collection.count_documents({"name": {"$gt": 0}}))
+>>>>>>> 4b1f7b4e9c65b221e78dc0d93454165b8ce5d942
