@@ -1,6 +1,9 @@
 # "How was working with MongoDB different from working with PostgreSQL? What was easier, and what was harder?"
 """
-
+MongoDB was similar in terms of difficulty. Both followed the same method of opening a connection with credentials (a pipeline).
+Subtle differences in the syntax of how to do it. Personally I find MongoDB easier as the data has less limitations on it.
+Data types don't have to be specified and there is more flexibility. This has it's downsides though. Less limitations means more
+chance for human error.
 """
 
 import pymongo
